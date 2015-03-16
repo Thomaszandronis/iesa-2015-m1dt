@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<newss>
+	<news>
+	   <title>test XML</title>
+	   <description>Essai du XML en cours</description>
+	   <link>http://google.fr</link>
+	   <items>
+		  <item>
+		  	<title>test XML</title>
+		  	<description>Essai du XML en cours</description>
+		  	<link>http://google.fr</link>
+		  </item>
+	   </items>
+	</news>
+	<news>
+		<title>test XML</title>
+		<description>Essai du XML en cours</description>
+		<link>http://google.fr</link>
+	</news>
+</newss>
