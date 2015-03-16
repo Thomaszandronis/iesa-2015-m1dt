@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Géolocalisation</title>
+    <script>
+    function geolocMe(position) {
+      var geoInfos = "";
+      geoInfos += "Latitude : "+position.coords.latiutude +"<br />";
+      geoInfos += "Longitude : "+position.coords.longitude +"<br />";
+      geoInfos += "Altitude : "+position.coords.altitude +"<br />";
+     document.getElementById("geolocation").innerHTML = geoInfos;
+    }
+		if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(geolocMe); 
+		} else {
+		  alert ("Votre navigateur ne prend pas en compte la geolocalisation HTML 5")
+		}
+    </script>
+  </head>
+  <body>
+    <div id="geolocation">zone présentant les informations de géolocalisation </div>
+  </body>
+</html>
