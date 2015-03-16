@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <title>Géolocalisation</title>
     <script>
-    function geolocMe(position) {
+    function coordonnees(position) {
       var geoInfos = "";
       geoInfos += "Latitude : "+position.coords.latiutude +"<br />";
       geoInfos += "Longitude : "+position.coords.longitude +"<br />";
       geoInfos += "Altitude : "+position.coords.altitude +"<br />";
+      if (position.coords.speed) {
+        geoInfos += "Vitesse : "+position.coords.speed +"<br />";
+      };
      document.getElementById("geolocation").innerHTML = geoInfos;
     }
 		if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(geolocMe); 
+        //navigator.geolocation.getCurrentPosition(coordonnees); 
+        navigator.geolocation.watchPosition(coordonnees); 
 		} else {
-		  alert ("Votre navigateur ne prend pas en compte la geolocalisation HTML 5")
+		  //alert ("Votre navigateur ne prend pas en compte la geolocalisation HTML 5")
 		}
     </script>
   </head>
