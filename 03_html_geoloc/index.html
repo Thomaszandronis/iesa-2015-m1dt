@@ -13,6 +13,7 @@
         geoInfos += "Vitesse : "+position.coords.speed +"<br />";
       };
      document.getElementById("geolocation").innerHTML = geoInfos;
+     var map = new google.maps.Map(document.getElementById("map"),optionsGmaps);
     }
     //fonction de callback en cas d'erreur
     function erreurPosition(error) {
@@ -32,16 +33,34 @@
         break;
       }
     }
-        
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(displaycoordonnees,displayerroner);
+     if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(displaycoordonnees,erreurPosition);
       //alert ("il y a une erreur!")
     } else {
       //alert ("Votre navigateur ne prend pas en compte la geolocalisation HTML 5")
     }
+
+    //Position par défaut (chatelet à paris)
+    var centerpos = new google.maps.LatLng(48.579400, 7.7519);
+    //Options relatives à la carte
+    var optionsGmaps = {
+      center:centerpos,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      zoom:15
+
+    };
+    //ROADMAP peut être remplacé par SATELLITE, HYBRID ou TERRAIN
+    //Zoom : 0 = terre entière, 19 = au niveau de la rue
+
+    //Initialisation de la carte pour l'élément portant l'id "map" 
+    var map; 
+        
+   
     </script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=set_to_true_or_false"></script>
   </head>
   <body>
     <div id="geolocation">zone présentant les informations de géolocalisation </div>
+    <div id="map" style="width:50%; height:500px;"></div>
   </body>
 </html>
