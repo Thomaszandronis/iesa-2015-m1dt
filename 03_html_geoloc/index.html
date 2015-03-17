@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Géolocalisation</title>
     <script>
-    function coordonnees(position) {
+    function displaycoordonnees(position) {
       var geoInfos = "";
       geoInfos += "Latitude : "+position.coords.latiutude +"<br />";
       geoInfos += "Longitude : "+position.coords.longitude +"<br />";
@@ -14,12 +14,15 @@
       };
      document.getElementById("geolocation").innerHTML = geoInfos;
     }
-		if (navigator.geolocation) {
-        //navigator.geolocation.getCurrentPosition(coordonnees); 
-        navigator.geolocation.watchPosition(coordonnees); 
-		} else {
-		  //alert ("Votre navigateur ne prend pas en compte la geolocalisation HTML 5")
-		}
+    function displayerroner(erreur) {
+    }
+        
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(displaycoordonnees,displayerroner);
+        alert ("il y a une erreur!")
+    } else {
+      //alert ("Votre navigateur ne prend pas en compte la geolocalisation HTML 5")
+    }
     </script>
   </head>
   <body>
