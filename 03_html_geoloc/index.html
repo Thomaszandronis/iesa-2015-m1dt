@@ -54,7 +54,13 @@
 
     //Initialisation de la carte pour l'élément portant l'id "map" 
     var map; 
-        
+    
+    marker = new google.maps.Marker(
+    {
+      position: LatLng,
+      map: maps,
+      title: "Vous êtes ici",
+    });
    
     </script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=set_to_true_or_false"></script>
