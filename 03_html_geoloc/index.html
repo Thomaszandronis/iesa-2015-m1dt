@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Géolocalisation</title>
-    <script>
+    <script>    
     function displaycoordonnees(position) {
       var geoInfos = "";
       geoInfos += "Latitude : "+position.coords.latiutude +"<br />";
@@ -14,12 +14,28 @@
       };
      document.getElementById("geolocation").innerHTML = geoInfos;
     }
-    function displayerroner(erreur) {
+    //fonction de callback en cas d'erreur
+    function erreurPosition(error) {
+      var info = "Erreur lors de la géolocalisation : ";
+      switch(error.code) {
+        case error.TIMEOUT:
+          info += "Timeout !";
+        break;
+        case error.PERMISSION_DENIED:
+          info += "Vous n'avez pas donné la permission";
+        break;
+         case error.POSITION_UNAVAILABLE:
+          info += "La position n'a pu être déterminée";
+        break;
+         case error.UNKNOW_ERROR:
+          info += "Erreur inconnue";
+        break;
+      }
     }
         
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(displaycoordonnees,displayerroner);
-        alert ("il y a une erreur!")
+      //alert ("il y a une erreur!")
     } else {
       //alert ("Votre navigateur ne prend pas en compte la geolocalisation HTML 5")
     }
