@@ -6,4 +6,5 @@ cours programmation
 
 #javascript
 complilation d'erreur, respecter la syntaxe
-GESTION DES CONDITIONS
+Gestion des conditions
+la façon d'incrémenter influe sur le résultat
