@@ -13,3 +13,8 @@ Si la fonction dans un "while" est un boleen, il faut qu'elle soit mise à jour 
 L'ordre des fonction n'est pas important.
 Après return => pas appeler
 2 fonctions =>meme parametres pas gênant
+
+#PHP
+Utilisation de wamp serveur
+# => commentaire sur plusieurs lignes
+';' caractère de séparation
