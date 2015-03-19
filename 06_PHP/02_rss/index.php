@@ -37,11 +37,23 @@ var_dump($tab);
 
 
 function creerHtmlPour($actualite){
+	$html = '';
+	foreach ($actualite as $key => $value) {
+		$html .= "<td>" . $value . "</td>";;
+		var_dump($html);;
+
+	}
 	return "<tr>".
+	$html .
+	"<tr>";
+
+
+
+	/* "<tr>".
 		"<td>" . $actualite['title'] . "</td>" .
 		"<td>" . $actualite['description'] . "</td>" .
 	"</tr>";;
-
+*/
 }
 
 

@@ -19,8 +19,10 @@ Utilisation de wamp serveur
 # => commentaire sur plusieurs lignes
 ';' caractère de séparation
 constante écrite toujours en MAJUSCULE
-type scalaires => boolean, integer, float (i.e. double), string
-type composes => array, object
-type spéciaux => resource, NULL
+3 types en PHP :
+	- type scalaires => boolean, integer, float (i.e. double), string
+	- type composes => array, object
+	- type spéciaux => resource, NULL
 gettype => affichage du type de données
 signature => nom fonction + parametre
+bien nommer les fontions, qu'elles aient du sens afin de mieux comprendre les actions.
