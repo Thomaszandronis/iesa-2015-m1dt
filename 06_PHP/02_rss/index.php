@@ -40,7 +40,6 @@ function creerHtmlPour($actualite){
 	$html = '';
 	foreach ($actualite as $key => $value) {
 		$html .= "<td>" . $value . "</td>";;
-		var_dump($html);;
 
 	}
 	return "<tr>".
