@@ -22,3 +22,4 @@ constante écrite toujours en MAJUSCULE
 type scalaires => boolean, integer, float (i.e. double), string
 type composes => array, object
 type spéciaux => resource, NULL
+gettype => affichage du type de données

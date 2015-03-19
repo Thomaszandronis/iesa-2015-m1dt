@@ -1,6 +1,4 @@
 <?php
-define("AIRPLANE", "D112");
-
-echo AIRPLANE;
-
+$a = "bonjour";
+var_dump($a);
 ?>
