@@ -48,10 +48,14 @@ echo creerHtmlPour($actus2);;
 
 $contenuTableau = array(
 	'title' => 'Foot - JAP - Vahid Halilhodzic appelle 31 joueurs pour ses premiers matches avec le Japon',
-    'description' => 'Nommé officiellement sélectionneur du Japon le 12 mars, Vahid... ');
+    'description' => 'Nommé officiellement sélectionneur du Japon le 12 mars, Vahid... '
+   );
+
+var_dump($contenuTableau);
 
 foreach ($contenuTableau as $key => $value) {
-	1.
+	var_dump($key);
+	var_dump($value);
 }
 
 
