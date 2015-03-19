@@ -18,3 +18,7 @@ Après return => pas appeler
 Utilisation de wamp serveur
 # => commentaire sur plusieurs lignes
 ';' caractère de séparation
+constante écrite toujours en MAJUSCULE
+type scalaires => boolean, integer, float (i.e. double), string
+type composes => array, object
+type spéciaux => resource, NULL

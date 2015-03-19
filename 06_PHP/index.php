@@ -1,10 +1,6 @@
 <?php
-$a = "bonjour";
-$$a = "monde";
+define("AIRPLANE", "D112");
 
-echo $a . "<br />";
+echo AIRPLANE;
 
-echo $$a . "<br />";
-
-echo $bonjour . "<br />";
 ?>
