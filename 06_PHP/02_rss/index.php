@@ -36,14 +36,14 @@ var_dump($tab);
 
 
 
-function creerHtmlPour($actus){
-	return "<ul>".
-		"<li>" . $actus['title'] . "</li>" .
-		"<li>" . $actus['description'] . "</li>" .
-	"</ul>";;
+function creerHtmlPour($actualite){
+	return "<tr>".
+		"<td>" . $actualite['title'] . "</td>" .
+		"<td>" . $actualite['description'] . "</td>" .
+	"</tr>";;
 
 }
-echo creerHtmlPour($actus2);;
+
 
 
 $contenuTableau = array(
@@ -58,5 +58,13 @@ foreach ($contenuTableau as $key => $value) {
 	var_dump($value);
 }
 
+function creerTableauPour($actualite){
+	return "<table border='1'>".
+	creerHtmlPour($actualite).
+	"</table>";;
+	
+}
+
+echo creerTableauPour($actus2);;
 
 ?>
